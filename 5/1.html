@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Web Lab</h1>
+    <div>
+        <h2>Reverse Number</h2>
+        <input type="text" id="str" />
+        <input type="button" value="Enter" id="btn" />
+    </div>
+    <script>
+        const rev = () => {
+            let num =
+                parseInt(document.getElementById("str").value);
+            let res;
+            let sum = 0;
+            while (num > 0) {
+                res = parseInt(num % 10);
+                sum = res + sum * 10;
+                num = parseInt(num / 10);
+            }
+            console.log("The reverse of the number is :- " + sum);
+        };
+        document.getElementById("btn").addEventListener("click",
+            rev);
+    </script>
+</body>
+
+</html>

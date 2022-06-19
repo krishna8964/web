@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Enter the string </h2>
+    <input type="text" name="name" id="s1">
+    <input type="button" id="btn" value="click">
+    <script>
+        let count = () => {
+            let str = document.getElementById("s1").value;
+            let n = str.length;
+            let cnt = 0;
+            for (let i = 0; i < n; i++) {
+                if (
+                    str[i] == "a" ||
+                    str[i] == "e" ||
+                    str[i] == "i" ||
+                    str[i] == "o" ||
+                    str[i] == "u" ||
+                    str[i] == "A" ||
+                    str[i] == "E" ||
+                    str[i] == "I" ||
+                    str[i] == "O" ||
+                    str[i] == "U"
+                )
+                    cnt++;
+            }
+            console.log(cnt);
+        };
+        let x =
+            document.getElementById("btn").addEventListener("click",
+                count);
+    </script>
+
+</body>
+
+</html>

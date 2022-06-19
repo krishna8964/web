@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>
+        Click the button to add a new row at the first position of the table and then add cells and content. </p>
+    <table id="myTable">
+        <tr>
+            <td> R1C1 </td>
+            <td> R1C2 </td>
+        </tr>
+        <tr>
+            <td> R2C1 </td>
+            <td> R2C2 </td>
+        </tr>
+        <td>
+            <td> R3C1 </td>
+            <td> R3C2 </td>
+            </tr>
+    </table> <br/>
+    <button type="button" onclick="myFunction()"> Add
+Row </button> </body>
+<script>
+    let myFunction = () => {
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "New cell1";
+        cell2.innerHTML = "New cell2";
+    };
+</script>
+<p id="demo"> </p>
+</body>
+
+</html>

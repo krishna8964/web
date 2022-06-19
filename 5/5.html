@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+    <h1>Web Lab</h1>
+    <div>
+        <h2>Reverse Number</h2>
+        <input type="text" id="str" />
+        <input type="button" value="Enter" id="btn" />
+    </div>
+
+    <script>
+        const rev = () => {
+            let st = document.getElementById("str").value;
+            let str = [];
+            let n = st.length;
+            for (let i = 0; i < n; i++) str.push(st[i]);
+            for (let i = 0; i < n; i++) {
+                for (let j = i + 1; j < n; j++) {
+                    if (str[i] > str[j]) {
+                        let l = str[i];
+                        str[i] = str[j];
+                        str[j] = l;
+                    }
+                }
+            }
+            let x = "";
+            for (let i = 0; i < n; i++) x += str[i];
+            console.log("Alphabetical Order string :- " + x);
+        };
+        document.getElementById("btn").addEventListener("click",
+            rev);
+    </script>
+    <p id="demo"></p>
+</body>
+
+</html>
