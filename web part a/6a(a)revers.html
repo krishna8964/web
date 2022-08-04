@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function reversal(n) {
+            n = parseInt(n)
+            let rev = 0
+            while (n != 0) {
+                let p = n % 10
+                rev = (rev * 10) + p
+                n = parseInt(n / 10)
+
+            }
+
+            return (rev)
+        }
+        var n = prompt(" enter the number to find reversal")
+        document.write(reversal(n))
+    </script>
+</body>
+
+</html>

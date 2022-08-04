@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        m = new Map()
+        l = prompt(" enter the number of key value pair ")
+        for (i = 0; i < l; i++) {
+            temp = prompt(" enter the value for " + (i + 1) + "key ")
+            m.set(i, temp)
+        }
+
+        m.forEach(element = (key, value) => {
+            document.write("key:" + key + " value: " + value + "<br>")
+        });
+    </script>
+</body>
+
+</html>
